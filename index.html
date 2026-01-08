@@ -1,102 +1,466 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Volodymyr Benderov | Data Analyst</title>
+  <title>Volodymyr Benderov | BI Analyst</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="bg-orbit" aria-hidden="true"></div>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow" aria-hidden="true"></div>
+
   <header class="site-header">
     <div class="brand">VB</div>
     <nav class="nav">
-      <a href="#projects">Projects</a>
-      <a href="#focus">Focus</a>
+      <a href="#overview">Overview</a>
+      <a href="#impact">Impact</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <main class="hero">
-    <div class="hero-copy">
-      <p class="eyebrow">Portfolio</p>
-      <h1>
-        Volodymyr
-        <span>Benderov</span>
-      </h1>
-      <p class="role">Data Analyst crafting clear narratives from noisy data.</p>
-      <p class="summary">
-        I turn messy datasets into decisions through SQL, Python, and BI dashboards.
-        Expect fast insights, careful validation, and visuals that make the story obvious.
-      </p>
-      <div class="cta-row">
-        <a class="btn primary" href="#projects">View Projects</a>
-        <a class="btn ghost" href="#contact">Get in touch</a>
-      </div>
-      <div class="metrics">
-        <div>
-          <span class="metric">120+</span>
-          <span class="label">Dashboards built</span>
+  <main>
+    <section class="hero" id="overview">
+      <div class="hero-copy" data-reveal>
+        <p class="eyebrow">BI Analyst | Data Analyst</p>
+        <h1>Volodymyr Benderov</h1>
+        <p class="lead">
+          Data Analyst with 7+ years of experience turning complex operational data into clear, actionable insights.
+        </p>
+        <p class="summary">
+          Expert in full-cycle BI development (SQL, Python, Power BI) with 40+ dashboards delivered and scalable infrastructure
+          for 30M+ monthly records. Known for calm collaboration, rigorous QA, and fast business impact.
+        </p>
+        <div class="pill-row">
+          <span class="pill">Willing to relocate to Germany</span>
+          <span class="pill">English C1 | German A2 | Russian C2</span>
         </div>
-        <div>
-          <span class="metric">15+ TB</span>
-          <span class="label">Data wrangled</span>
+        <div class="cta-row">
+          <a class="btn primary" href="#impact">Explore impact</a>
+          <a class="btn ghost" href="#contact">Get in touch</a>
         </div>
-        <div>
-          <span class="metric">90%</span>
-          <span class="label">Stakeholder clarity</span>
+        <div class="contact-mini">
+          <a href="mailto:benderov@gmail.com">benderov@gmail.com</a>
+          <span class="separator" aria-hidden="true">|</span>
+          <a href="https://linkedin.com/in/volodymyr-benderov/" target="_blank" rel="noreferrer">linkedin.com/in/volodymyr-benderov</a>
         </div>
       </div>
-    </div>
 
-    <section class="hero-card" id="projects">
-      <h2>Signature Work</h2>
-      <ul class="project-list">
-        <li>
-          <h3>Revenue Pulse</h3>
-          <p>Multi-source pipeline and dashboard for weekly revenue forecasting.</p>
-          <span>SQL, dbt, Power BI</span>
-        </li>
-        <li>
-          <h3>Customer Signals</h3>
-          <p>Behavior segmentation and churn early warning system.</p>
-          <span>Python, Snowflake, Tableau</span>
-        </li>
-        <li>
-          <h3>Ops Command Center</h3>
-          <p>Real-time monitoring suite for logistics performance.</p>
-          <span>Looker, Airflow, BigQuery</span>
-        </li>
-      </ul>
+      <aside class="hero-card" data-reveal>
+        <div class="card-head">
+          <p class="card-title">Signal Console</p>
+          <p class="card-subtitle">Delivery cadence and operational telemetry</p>
+        </div>
+        <canvas id="impactChart" width="520" height="260" role="img" aria-label="Line chart showing dashboard delivery and telemetry records over time"></canvas>
+        <div class="legend">
+          <span><i class="dot dot-a"></i>Dashboards shipped</span>
+          <span><i class="dot dot-b"></i>Telemetry records</span>
+        </div>
+        <div class="mini-grid" id="metricBadges"></div>
+        <p class="card-note">Signals update live based on portfolio highlights.</p>
+      </aside>
+    </section>
+
+    <section class="section" id="impact">
+      <div class="section-head" data-reveal>
+        <h2>Impact dashboard</h2>
+        <p>Operational clarity delivered through automation, scalable BI infrastructure, and story-first reporting.</p>
+      </div>
+      <div class="metrics-grid" id="metricsGrid"></div>
+      <div class="panel-grid">
+        <article class="panel" data-reveal>
+          <h3>Achievements</h3>
+          <ul class="list" id="achievementList"></ul>
+        </article>
+        <article class="panel" data-reveal>
+          <h3>Delivery blueprint</h3>
+          <ol class="list ordered">
+            <li>Define business KPIs with stakeholders and translate into metrics.</li>
+            <li>Build resilient data pipelines with SQL, Power Query, and QA checks.</li>
+            <li>Model data in Power BI for speed, clarity, and governance.</li>
+            <li>Launch dashboards with access controls, auto-refresh, and training.</li>
+            <li>Track adoption and iterate with feedback loops.</li>
+          </ol>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="section-head" data-reveal>
+        <h2>Skills focus</h2>
+        <p>BI tooling, data engineering foundations, and analytical depth.</p>
+      </div>
+      <div class="skills-grid" id="skillsGrid"></div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="section-head" data-reveal>
+        <h2>Experience</h2>
+        <p>Large gold mining enterprise, part of one of the world's largest gold producers.</p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item" data-reveal>
+          <div class="timeline-card">
+            <h3>BI Analyst / Data Analyst</h3>
+            <p class="meta">Enterprise-scale operational analytics and BI delivery.</p>
+            <ul class="list">
+              <li>Built interactive Power BI dashboards from scratch with complex DAX modeling.</li>
+              <li>Designed end-to-end reporting solutions for operational efficiency and system performance.</li>
+              <li>Integrated data from MS SQL Server, operational systems, and CSV/Excel sources.</li>
+              <li>Optimized data preparation using T-SQL, SQL Views, and Power Query.</li>
+              <li>Published reports via Power BI Report Server with AD-based access control.</li>
+              <li>Analyzed telemetry time-series data to surface trends and anomalies.</li>
+              <li>Trained users and continuously enhanced BI solutions for performance.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="education">
+      <div class="section-head" data-reveal>
+        <h2>Education & learning</h2>
+        <p>Formal IT foundation supported by continuous BI upskilling.</p>
+      </div>
+      <div class="edu-grid">
+        <article class="panel" data-reveal>
+          <h3>Education</h3>
+          <ul class="list">
+            <li>Master of Information Technology, Kharkiv National University of Radio Electronics (2010).</li>
+            <li>Bachelor of Applied Mathematics, Kharkiv National University of Radio Electronics (2009).</li>
+          </ul>
+        </article>
+        <article class="panel" data-reveal>
+          <h3>Courses</h3>
+          <ul class="list">
+            <li>Microsoft Power BI Data Analyst, Coursera.</li>
+            <li>Google Business Intelligence, Coursera.</li>
+            <li>Google Data Analytics, Coursera.</li>
+            <li>Pandas for Data Analysis, analystbuilder.com.</li>
+            <li>Tableau for Data Visualization, analystbuilder.com.</li>
+            <li>SQL and PostgreSQL, Beonmax.com.</li>
+            <li>Complete Python Course, Beonmax.com.</li>
+            <li>Database Administration in MS SQL Server 2016, training-microtest.ru.</li>
+          </ul>
+        </article>
+        <article class="panel" data-reveal>
+          <h3>Languages</h3>
+          <ul class="list">
+            <li>English (C1, Advanced).</li>
+            <li>German (A2, In progress).</li>
+            <li>Russian (C2, Native).</li>
+          </ul>
+        </article>
+      </div>
     </section>
   </main>
 
-  <section class="focus" id="focus">
-    <h2>What I Focus On</h2>
-    <div class="focus-grid">
-      <article>
-        <h3>Diagnostic Analytics</h3>
-        <p>Root-cause analysis with clean SQL logic and clear metric definitions.</p>
-      </article>
-      <article>
-        <h3>Story-First Dashboards</h3>
-        <p>Dashboards designed around the decisions, not just the data.</p>
-      </article>
-      <article>
-        <h3>Automation & QA</h3>
-        <p>Repeatable pipelines with testing guardrails and alerting.</p>
-      </article>
+  <section class="contact" id="contact">
+    <div class="contact-card" data-reveal>
+      <h2>Let us build clarity together</h2>
+      <p>Available for analytics consulting, dashboard rebuilds, and operational reporting leadership.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="mailto:benderov@gmail.com">Email</a>
+        <a class="btn ghost" href="https://linkedin.com/in/volodymyr-benderov/" target="_blank" rel="noreferrer">LinkedIn</a>
+      </div>
     </div>
   </section>
 
-  <section class="contact" id="contact">
-    <h2>Let us build clarity together</h2>
-    <p>
-      Available for analytics consulting, dashboard rebuilds, and ad hoc insights.
-    </p>
-  </section>
+  <footer class="site-footer">
+    <p>Volodymyr Benderov | BI Analyst | Data Analyst</p>
+  </footer>
+
+  <noscript>
+    <div class="noscript">
+      JavaScript is used for animated metrics and data visualization. Enable it for the full experience.
+    </div>
+  </noscript>
+
+  <script>
+    const metrics = [
+      { label: "Dashboards delivered", value: 40, suffix: "+", note: "Cross-functional BI adoption" },
+      { label: "Telemetry records monthly", value: 30, suffix: "M+", note: "Scalable infrastructure" },
+      { label: "Hours saved weekly", value: 5, suffix: "+", note: "Automation impact" },
+      { label: "KPIs tracked", value: 150, suffix: "+", note: "Granular operational control" }
+    ];
+
+    const badges = [
+      { label: "Dashboards", value: "40+" },
+      { label: "Records/mo", value: "30M+" },
+      { label: "Hours saved", value: "5+ /wk" }
+    ];
+
+    const achievements = [
+      "Automated daily resource utilization reporting, saving 5+ hours per week.",
+      "Led the shift from manual Excel workflows to a centralized real-time BI ecosystem.",
+      "Enabled tracking of 150+ key performance parameters for faster root-cause analysis.",
+      "Migrated data visualizations from legacy systems to Power BI, cutting licensing costs.",
+      "Built a web-based monitoring app (ASP.NET/C#) to replace desktop clients.",
+      "Designed BI infrastructure for 30M+ monthly telemetry records with high performance.",
+      "Automated monitoring of physical asset stability using complex sensor data flows.",
+      "Delivered 40+ Power BI dashboards for Operations and Engineering teams.",
+      "Built dashboards for critical resource usage enabling remote diagnostics."
+    ];
+
+    const skills = [
+      {
+        title: "BI & Visualization",
+        items: [
+          { name: "Power BI (DAX, Power Query, Report Server)", level: 95 },
+          { name: "Power BI Service (access control, auto-refresh)", level: 88 },
+          { name: "Tableau", level: 82 },
+          { name: "Excel (Power Query, Pivot Tables, Power Pivot)", level: 85 },
+          { name: "Matplotlib, Seaborn", level: 78 }
+        ]
+      },
+      {
+        title: "Databases & SQL",
+        items: [
+          { name: "SQL, T-SQL, SQL Views, Stored Procedures", level: 92 },
+          { name: "MS SQL Server", level: 90 },
+          { name: "PostgreSQL", level: 80 },
+          { name: "Google BigQuery", level: 76 },
+          { name: "MySQL", level: 72 }
+        ]
+      },
+      {
+        title: "Analysis & Statistics",
+        items: [
+          { name: "Python (Pandas, NumPy, SciPy)", level: 88 },
+          { name: "A/B Testing & Hypothesis Testing", level: 82 },
+          { name: "Statistical Inference & Descriptive Statistics", level: 84 },
+          { name: "Time-series Analysis", level: 86 },
+          { name: "Telemetry & Log Analysis", level: 83 }
+        ]
+      },
+      {
+        title: "Data Preparation & Web",
+        items: [
+          { name: "SQL-based ETL & Data Cleaning Workflows", level: 90 },
+          { name: "CSV/Excel Integration", level: 88 },
+          { name: "External Data Source Integration", level: 80 },
+          { name: "ASP.NET Web Forms (C#)", level: 70 },
+          { name: "HTML, CSS, JavaScript, jQuery, Bootstrap, Git", level: 74 }
+        ]
+      },
+      {
+        title: "Soft Skills",
+        items: [
+          { name: "Stakeholder Management", level: 88 },
+          { name: "KPI & Metric Design", level: 86 },
+          { name: "Critical Thinking", level: 90 },
+          { name: "Cross-functional Collaboration", level: 88 }
+        ]
+      }
+    ];
+
+    const chartSeries = {
+      labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+      dashboards: [2, 3, 5, 6, 4, 7, 5, 6, 8, 7, 9, 10],
+      telemetry: [12, 14, 18, 22, 20, 24, 26, 23, 27, 30, 28, 32]
+    };
+
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    const metricsGrid = document.getElementById("metricsGrid");
+    const badgesGrid = document.getElementById("metricBadges");
+    const achievementsList = document.getElementById("achievementList");
+    const skillsGrid = document.getElementById("skillsGrid");
+
+    const formatValue = (value, suffix) => `${value}${suffix || ""}`;
+
+    const renderMetrics = () => {
+      metricsGrid.innerHTML = metrics
+        .map(
+          (metric) => `
+            <article class="metric-card" data-reveal>
+              <div class="metric-value" data-count="${metric.value}" data-suffix="${metric.suffix}">0</div>
+              <div class="metric-label">${metric.label}</div>
+              <p class="metric-note">${metric.note}</p>
+            </article>
+          `
+        )
+        .join("");
+
+      badgesGrid.innerHTML = badges
+        .map(
+          (badge) => `
+            <div class="badge">
+              <span class="badge-value">${badge.value}</span>
+              <span class="badge-label">${badge.label}</span>
+            </div>
+          `
+        )
+        .join("");
+    };
+
+    const renderAchievements = () => {
+      achievementsList.innerHTML = achievements.map((item) => `<li>${item}</li>`).join("");
+    };
+
+    const renderSkills = () => {
+      skillsGrid.innerHTML = skills
+        .map(
+          (group) => `
+            <article class="skill-card" data-reveal>
+              <h3>${group.title}</h3>
+              <div class="skill-items">
+                ${group.items
+                  .map(
+                    (skill) => `
+                      <div class="skill-row">
+                        <span>${skill.name}</span>
+                        <div class="skill-bar" data-level="${skill.level}">
+                          <span class="skill-fill"></span>
+                        </div>
+                      </div>
+                    `
+                  )
+                  .join("")}
+              </div>
+            </article>
+          `
+        )
+        .join("");
+    };
+
+    const animateCount = (el) => {
+      const value = Number(el.dataset.count);
+      const suffix = el.dataset.suffix || "";
+      if (prefersReducedMotion || Number.isNaN(value)) {
+        el.textContent = formatValue(value, suffix);
+        return;
+      }
+      const duration = 1200;
+      const start = performance.now();
+      const update = (now) => {
+        const progress = Math.min((now - start) / duration, 1);
+        const current = Math.floor(progress * value);
+        el.textContent = formatValue(current, suffix);
+        if (progress < 1) {
+          requestAnimationFrame(update);
+        } else {
+          el.textContent = formatValue(value, suffix);
+        }
+      };
+      requestAnimationFrame(update);
+    };
+
+    const animateSkillBar = (bar) => {
+      const level = Number(bar.dataset.level || 0);
+      const fill = bar.querySelector(".skill-fill");
+      if (!fill) return;
+      fill.style.width = prefersReducedMotion ? `${level}%` : "0%";
+      requestAnimationFrame(() => {
+        fill.style.width = `${level}%`;
+      });
+    };
+
+    const initChart = () => {
+      const canvas = document.getElementById("impactChart");
+      if (!canvas) return;
+      const ctx = canvas.getContext("2d");
+      const dpi = window.devicePixelRatio || 1;
+      const width = canvas.clientWidth;
+      const height = canvas.clientHeight;
+      canvas.width = width * dpi;
+      canvas.height = height * dpi;
+      ctx.scale(dpi, dpi);
+
+      const padding = 28;
+      const chartWidth = width - padding * 2;
+      const chartHeight = height - padding * 2;
+
+      const maxTelemetry = Math.max(...chartSeries.telemetry);
+      const maxDashboards = Math.max(...chartSeries.dashboards);
+      const maxValue = Math.max(maxTelemetry, maxDashboards);
+
+      const xStep = chartWidth / (chartSeries.labels.length - 1);
+
+      const drawLine = (data, color) => {
+        ctx.beginPath();
+        data.forEach((value, index) => {
+          const x = padding + index * xStep;
+          const y = padding + chartHeight - (value / maxValue) * chartHeight;
+          if (index === 0) {
+            ctx.moveTo(x, y);
+          } else {
+            ctx.lineTo(x, y);
+          }
+        });
+        ctx.strokeStyle = color;
+        ctx.lineWidth = 2;
+        ctx.stroke();
+      };
+
+      ctx.clearRect(0, 0, width, height);
+      ctx.fillStyle = "rgba(255, 255, 255, 0.06)";
+      for (let i = 0; i <= 4; i++) {
+        const y = padding + (chartHeight / 4) * i;
+        ctx.fillRect(padding, y, chartWidth, 1);
+      }
+
+      drawLine(chartSeries.telemetry, "#7ee081");
+      drawLine(chartSeries.dashboards, "#f6b73c");
+
+      ctx.fillStyle = "#9fb4ad";
+      ctx.font = "12px 'IBM Plex Mono', monospace";
+      chartSeries.labels.forEach((label, index) => {
+        const x = padding + index * xStep;
+        ctx.fillText(label, x - 8, height - 8);
+      });
+    };
+
+    const initObservers = () => {
+      const revealElements = document.querySelectorAll("[data-reveal]");
+      if (prefersReducedMotion || !("IntersectionObserver" in window)) {
+        revealElements.forEach((el) => {
+          el.classList.add("is-visible");
+          if (el.classList.contains("metric-card")) {
+            const valueEl = el.querySelector(".metric-value");
+            if (valueEl) animateCount(valueEl);
+          }
+          el.querySelectorAll(".skill-bar").forEach(animateSkillBar);
+        });
+        return;
+      }
+
+      const observer = new IntersectionObserver(
+        (entries, obs) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add("is-visible");
+            if (entry.target.classList.contains("metric-card")) {
+              const valueEl = entry.target.querySelector(".metric-value");
+              if (valueEl) animateCount(valueEl);
+            }
+            entry.target.querySelectorAll(".skill-bar").forEach(animateSkillBar);
+            obs.unobserve(entry.target);
+          });
+        },
+        { threshold: 0.3 }
+      );
+
+      revealElements.forEach((el) => observer.observe(el));
+    };
+
+    const init = () => {
+      renderMetrics();
+      renderAchievements();
+      renderSkills();
+      initChart();
+      initObservers();
+      window.addEventListener("resize", initChart);
+    };
+
+    document.addEventListener("DOMContentLoaded", init);
+  </script>
 </body>
 </html>
+
