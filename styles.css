@@ -420,6 +420,15 @@ h1 {
   margin-bottom: 12px;
 }
 
+
+.project-card .card-subtitle {
+  margin-top: 8px;
+  line-height: 1.6;
+}
+
+.project-actions {
+  margin-top: 16px;
+}
 .list {
   list-style: none;
   display: grid;
