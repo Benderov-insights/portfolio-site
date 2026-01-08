@@ -93,7 +93,7 @@ main {
 
 .hero {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.9fr);
   gap: 40px;
   align-items: center;
   margin-bottom: 80px;
@@ -101,6 +101,12 @@ main {
 
 .hero-copy {
   max-width: 560px;
+}
+
+.hero-side {
+  display: grid;
+  gap: 24px;
+  justify-items: center;
 }
 
 .eyebrow {
@@ -200,7 +206,7 @@ h1 {
 .hero-visual {
   display: grid;
   gap: 14px;
-  max-width: 360px;
+  width: min(360px, 100%);
 }
 
 .photo-frame {
@@ -238,6 +244,7 @@ h1 {
   display: block;
   object-fit: cover;
   aspect-ratio: 4 / 5;
+  max-height: 520px;
   filter: saturate(1.05) contrast(1.02);
 }
 
@@ -576,6 +583,14 @@ h1 {
   .site-header {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-side {
+    justify-items: flex-start;
   }
 
   .contact {
